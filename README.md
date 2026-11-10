@@ -2,7 +2,23 @@
 
 A browser-based RPG dungeon crawler built with Flask and WebSockets. Fight enemies, earn gold, buy equipment from the shop, and climb to the top of the leaderboard alongside other players! Don't forget to chat with the other players and let them know how you're going, or simply ask them about their day! All in real time.
 
-Built for CITS3403 (Agile Web Development) at UWA.
+Built as a three-person university team project (2026).
+
+## My contributions
+
+This is my fork of the team repo, which three of us built together.
+
+- **Commits:** 39 of the team's 159 commits are mine (38 as dendenpixel & 1 under a default local git name, same email), from `git log --author=dennisquek027@gmail.com --oneline | wc -l`.
+- **Dungeon & battle system:** 1011 of 1335 lines across `static/js/dungeon.js` (748 of 823), `dungeon_sockets.py` (79 of 162), `static/css/dungeon.css` (133 of 195) & `templates/dungeon.html` (51 of 155).
+- **Tests:** 293 of 432 lines, `tests/test_selenium.py` (225 of 276) & `tests/test_unit.py` (68 of 156).
+
+The line counts come from running this on each file:
+
+```sh
+git blame -w --line-porcelain HEAD -- <file> | grep -c "^author-mail <dennisquek027@gmail.com>"
+```
+
+Shop, chat/sockets and models are the other two teammates' work.
 
 ---
 
@@ -29,7 +45,7 @@ If something breaks during setup, jump to the fix:
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/robertmoa/catquest
+git clone https://github.com/dendenpixel/catquest
 cd catquest
 ```
 
@@ -105,7 +121,7 @@ Then open on your default browser at: **http://127.0.0.1:5000**
 
 **Windows:**
 ```bash
-git clone https://github.com/robertmoa/catquest
+git clone https://github.com/dendenpixel/catquest
 cd catquest
 python -m venv venv
 venv\Scripts\activate
@@ -117,7 +133,7 @@ python app.py
 
 **Mac/Linux:**
 ```bash
-git clone https://github.com/robertmoa/catquest
+git clone https://github.com/dendenpixel/catquest
 cd catquest
 python3 -m venv venv
 source venv/bin/activate
@@ -249,10 +265,3 @@ socketio.run(app, debug=True, port=5001)
 **Windows/Linux** — another process is on 5000. Either kill it or change the port as above.
 ---
 
-## Group Members
-
-| Name | Student ID | GitHub Username |
-|------|------------|-----------------|
-| Robert Smart | 24468811 | robertmoa |
-| Lachlan Vaz | 24219564 | VazLM |
-| Dennis Quek | 23879473 | dendenpixel |
